@@ -53,6 +53,8 @@ async function run(){
     await redis.del(cacheKey);
     console.log("Cache delted");
 
+    cached = await redis.get(cacheKey);
+
     if(!cached){
         const freshProducts = dbProducts;
 
