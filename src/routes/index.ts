@@ -1,6 +1,6 @@
 import { Router } from "express";
 import productRoutes from "./product.routes";
-
+import notificationRoute from "./notification.route"
 const router = Router();
 
 router.get("/health", (_req, res) => {
@@ -14,5 +14,6 @@ router.get("/health", (_req, res) => {
 });
 
 router.use("/products", productRoutes);
+router.use("/notifications", notificationRoute);
 
 export default router;
