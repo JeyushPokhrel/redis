@@ -10,7 +10,7 @@ export async function publishNotificationController(
         const {title, message} = req.body;
         const notification = {
             id: Date.now().toString(),
-            title, message, createdAt: Date().toString(); 
+            title, message, createdAt: Date().toString()
         }
 
         await publishNotification(notification);
